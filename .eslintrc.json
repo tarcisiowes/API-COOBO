@@ -14,6 +14,8 @@
     "rules": {
         "linebreak-style":"off",
         "consistent-return":"off",
-        "default-case":"off"
+        "default-case":"off",
+        "new-cap":"off",
+        "prefer-const":"off"
     }
 }
