@@ -5,16 +5,20 @@ const deletarDocumento = async (req, res) => {
 
   const timeElapsed = Date.now();
   const today = new Date(timeElapsed);
-  const deletedAt = today.toDateString();
+  const deletedat = today.toDateString();
 
-  const resposta = await knex('documents').where({ id }).patch({
-    deletedAt,
-  });
+  const deleted = true;
 
-  if (resposta.rowCount === 0) {
-    return res.status(404).json('O documento do ID infomado não existe');
+  try {
+    const resposta = await knex('documents').where({ id }).update({ deletedat, deleted });
+
+    if (resposta.rowCount === 0) {
+      return res.status(404).json('O documento do ID infomado não existe');
+    }
+    return res.json('Documento deletado com sucesso!');
+  } catch (error) {
+    return res.status(404).json(`Erro ${error}`);
   }
-  return res.json(resposta);
 };
 
 module.exports = { deletarDocumento };
