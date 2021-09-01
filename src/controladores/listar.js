@@ -4,7 +4,7 @@ const listarDocumentos = async (req, res) => {
   try {
     const resposta = await knex('documents').where('deleted', false);
     if (resposta.rowCount === 0) {
-      return res.status(404).json('Não foi encontrado nenhum documento');
+      return res.status(404).json('Não ha nenhum registro no momento!');
     }
     return res.json(resposta);
   } catch (error) {
