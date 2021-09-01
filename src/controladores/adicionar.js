@@ -5,6 +5,12 @@ const adicionarDocumento = async (req, res) => {
     name, content,
   } = req.body;
 
+  const nomeJaCadastrado = await knex('documents').select('name').where({ name });
+
+  if (nomeJaCadastrado.length > 0) {
+    return res.status(400).json('Não é permitido utilizar este nome, ele ja foi cadastrado!');
+  }
+
   const timeElapsed = Date.now();
   const today = new Date(timeElapsed);
   const createdat = today.toDateString();
