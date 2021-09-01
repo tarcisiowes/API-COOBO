@@ -6,7 +6,7 @@ const buscarDocumento = async (req, res) => {
     const resposta = await knex('documents').where({ id }).where('deleted', false);
 
     if (resposta.rowCount === 0) {
-      return res.status(404).json('O documento do ID infomado não existe');
+      return res.status(404).json('O ID infomado não existe');
     }
     return res.json(resposta);
   } catch (error) {
