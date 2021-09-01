@@ -1,4 +1,3 @@
-# API-
 # Desafio Técnico Spendfy - 2021 - COOBO: API REST
 
 ## Back-end
