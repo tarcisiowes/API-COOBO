@@ -13,9 +13,9 @@ const deletarDocumento = async (req, res) => {
     const resposta = await knex('documents').where({ id }).update({ deletedat, deleted });
 
     if (resposta.rowCount === 0) {
-      return res.status(404).json('O documento do ID infomado não existe');
+      return res.status(404).json('O ID infomado não existe');
     }
-    return res.json('Documento deletado com sucesso!');
+    return res.json('Remoção realizada com sucesso!');
   } catch (error) {
     return res.status(404).json(`Erro ${error}`);
   }
