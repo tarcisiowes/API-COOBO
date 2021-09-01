@@ -10,13 +10,13 @@ Esta API REST tem a capacidade de:
   
   **Importante:Rest API criada com o intuito de continuar no processo seletivo para a vaga de Desenvolvedor na empresa COOBO.!**
 
-Para utilizar esta API, instalar com Npm Install ou Yarn as seguintes bibliotecas:
+Para utilizar esta API, é necessario instalar com Npm Install ou Yarn as seguintes bibliotecas:
     "cors";
     "express";
     "knex"; 
     "pg"; 
     "nodemon"; 
-Podendo iniciala com npm run dev.
+Podendo iniciada com npm run dev.
 
 **Importante:Rest API criada com node.js na versão 14.17.5 !**
 
