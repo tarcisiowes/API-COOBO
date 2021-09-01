@@ -28,9 +28,9 @@ const adicionarDocumento = async (req, res) => {
     });
 
     if (resposta.rowCount === 0) {
-      return res.status(404).json('Não foi possivel adicionar o documento, tente novamente');
+      return res.status(404).json('Não foi possivel fazer o cadastro, tente novamente');
     }
-    return res.json('Documento criado com sucesso!');
+    return res.json('Cadastro realizado com sucesso!');
   } catch (error) {
     return res.status(404).json(`Erro ${error}`);
   }
