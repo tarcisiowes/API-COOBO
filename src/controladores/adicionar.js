@@ -5,6 +5,13 @@ const adicionarDocumento = async (req, res) => {
     name, content,
   } = req.body;
 
+  if (!name) {
+    return res.status(404).json('É preciso informar um nome');
+  }
+  if (!content) {
+    return res.status(404).json('É preciso informar o conteudo');
+  }
+
   const nomeJaCadastrado = await knex('documents').select('name').where({ name });
 
   if (nomeJaCadastrado.length > 0) {
