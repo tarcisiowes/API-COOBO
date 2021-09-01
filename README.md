@@ -23,7 +23,7 @@ Podendo iniciala com npm run dev.
 
 ### Banco de dados
 *** Querys disponiveis no arquivo "Schema.sql" !**
-# 1ª tabela ("contatos")
+# tabela ("Documents")
 
 | Coluna     | Tipo         | NOT NULL? | PK? | REFERENCES | DEFAULT   |
 | --------   | --------     | --------- | --- | ---------- | -------   |
