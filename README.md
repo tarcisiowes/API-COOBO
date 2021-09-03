@@ -16,7 +16,7 @@ Para utilizar esta API, é necessario instalar com Npm Install ou Yarn as seguin
     "knex"; 
     "pg"; 
     "nodemon"; 
-Podendo iniciada com npm run dev.
+Podendo ser iniciada com npm run dev.
 
 **Importante:Rest API criada com node.js na versão 14.17.5 !**
 
